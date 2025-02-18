@@ -7,7 +7,7 @@
 [![Pug](https://img.shields.io/badge/Pug-3.x-yellowgreen)](https://pugjs.org/)
 
 **Enlace de la aplicación:**  
-🚀 [Agencia de Viajes en Producción](https://tu-dominio.com) *(Reemplazar con tu enlace real)*
+🚀 [Agencia de Viajes en Producción](https://agenciadeviajesrml-1.onrender.com) *(Reemplazar con tu enlace real)*
 
 ## Descripción 📖  
 Sistema web para gestión de viajes con:
@@ -16,8 +16,6 @@ Sistema web para gestión de viajes con:
 - Sistema de testimonios de clientes  
 - Renderizado dinámico con motor Pug  
 - Arquitectura MVC profesional  
-
-![Captura de pantalla](https://via.placeholder.com/800x400) *(Agregar imagen real del proyecto)*
 
 ## Características Principales 🚀  
 ✅ **Sistema de Reservas**  
