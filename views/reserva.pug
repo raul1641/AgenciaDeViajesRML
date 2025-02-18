@@ -1,0 +1,51 @@
+extends ./layout/index
+
+block contenido
+    main.container.mt-5
+        h1.text-center.mb-5 Reserva tu Viaje
+
+        if exito
+            .alert.alert-success.text-center ¡Reserva realizada correctamente!
+
+        if error
+            .alert.alert-danger.text-center Error al procesar la reserva
+
+        .row.justify-content-center
+            .col-md-8
+                form(action="/reserva" method="POST")
+                    .mb-3
+                        label.form-label(for="nombre") Nombre Completo:
+                        input.form-control(
+                            type="text"
+                            id="nombre"
+                            name="nombre"
+                            required
+                            placeholder="Ej: Juan Pérez"
+                        )
+
+                    .mb-3
+                        label.form-label(for="destino") Destino:
+                        select.form-select(
+                            id="destino"
+                            name="destino"
+                            required
+                        )
+                            option(value="") -- Seleccione --
+                            each viaje in viajesDisponibles
+                                option(
+                                    value=viaje.slug
+                                    selected=(viaje.slug === destinoSeleccionado)
+                                )= viaje.titulo
+
+                    .mb-3
+                        label.form-label(for="fecha") Fecha de Viaje:
+                        input.form-control(
+                            type="date"
+                            id="fecha"
+                            name="fecha"
+                            required
+                            min=new Date().toISOString().split('T')[0]
+                        )
+
+                    .d-grid
+                        button.btn.btn-primary.btn-lg(type="submit") Confirmar Reserva

@@ -1,0 +1,21 @@
+extends ./layout/index
+
+block contenido
+    main.container.mt-5
+        h1.text-center.mb-5 Listado de Reservas
+
+        if reservas.length
+            table.table.table-striped
+                thead
+                    tr
+                        th Nombre
+                        th Destino
+                        th Fecha
+                tbody
+                    each reserva in reservas
+                        tr
+                            td= reserva.nombre
+                            td= reserva.destino
+                            td= new Date(reserva.fecha).toLocaleDateString()
+        else
+            p.text-center No hay reservas registradas
