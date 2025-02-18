@@ -51,5 +51,5 @@ Sistema web para gestión de viajes con:
 
 1. **Clonar repositorio**  
 ```bash
-git clone https://github.com/tu-usuario/agenciaviajes.git
-cd agenciaviajes
+git clone https://github.com/raul1641/AgenciaDeViajesRML.git
+cd agenciadeviajes-master
